@@ -85,8 +85,8 @@
     </div>
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-    <script src="<?php echo $url; ?>/js/jquery.js"></script>
-    <script src="<?php echo $url; ?>/js/bootstrap.bundle.js"></script>
-    <script src="<?php echo $url; ?>/js/bootstrap.js"></script>
+    <script src="<?php echo DIRJS; ?>jquery.js"></script>
+    <script src="<?php echo DIRJS; ?>bootstrap.bundle.js"></script>
+    <script src="<?php echo DIRJS; ?>bootstrap.js"></script>
   </body>
 </html>

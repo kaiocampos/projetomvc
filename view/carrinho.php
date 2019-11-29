@@ -31,7 +31,7 @@
                 foreach ($carrinho->getItems() as $item) {
 
                     $produto = $item->getProduto();
-                    $linkRemove = "http://localhost/projetomvc2/carrinho/remover/" . $produto->getPk_produto();
+                    $linkRemove = BASEURL."carrinho/remover/".$produto->getPk_produto();
 
                     // Inicio HTML
 
@@ -43,7 +43,7 @@
                 
                 <div class="col-md-3 p-0">
                     <div class="card">
-                        <img class="card-img-top" src="<?php echo $url . '/View/img/produtos/' . $produto->getImagem(); ?>" alt="Imagem de capa do card">
+                        <img class="card-img-top" src="<?php echo BASEURL . '/View/img/produtos/' . $produto->getImagem(); ?>" alt="Imagem de capa do card">
                     </div>
                 </div>
 

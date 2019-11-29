@@ -1,5 +1,7 @@
-<?php 
+<?php     
     require "includes/autoload.php";
+    require "Model/Constante.php";
+    
     session_start();
 
     
@@ -11,10 +13,10 @@
     @$router = $_GET['model'].$_GET['action'];
     // router = departamento/cadastrar/listar
 
-    $view = "";
+    // $view = "";
 
     // config
-    $url = "http://localhost/projetomvc2/";
+    // $url = "http://localhost/projetomvc2/";
 
     switch($router){
 
@@ -35,7 +37,8 @@
             $obj = new \LOJA\API\CategoriaVisualizar; 
             $categoria = $obj->dados;
             $view = "visualiza-categoria.php";
-        break;        
+        break;
+
         case 'clientecadastrar':        
             $obj = new \LOJA\API\ClienteCadastrar;
             $msg = $obj->msg;
@@ -53,6 +56,7 @@
             $cliente = $obj->cliente;
             $view = "visualiza-cliente.php";
         break;
+
         case 'produtocadastrar':
             \LOJA\includes\Seguranca::restritoAdm();
         
@@ -69,6 +73,7 @@
             $lista = $obj->lista;
             $view = "lista-produto.php";
         break;
+
         case 'usuariocadastrar':
             \LOJA\includes\Seguranca::restritoAdm();
             $obj = new \LOJA\API\UsuarioCadastrar;
@@ -87,12 +92,13 @@
             $usuario = $obj->dados;
             $view = "visualiza-usuario.php";
         break;
+        
         case 'fornecedorcadastrar':
             \LOJA\includes\Seguranca::restritoAdm();
             $obj = new LOJA\API\FornecedorCadastrar;
             $msg = $obj->msg;
             $view = "form-fornecedor.php";
-        break;        
+        break;             
         case 'fornecedorlistar':
             \LOJA\includes\Seguranca::restritoAdm();
             $obj = new LOJA\API\FornecedorListar;
@@ -105,11 +111,13 @@
             $fornecedor = $obj->dado;            
             $view = "visualiza-fornecedor.php";
         break;
+
         case 'loginadm':
             $obj = new \LOJA\API\UsuarioLogar;
             $msg = $obj->msg;
             $view = 'form-login-adm.php';
         break;
+
         case 'painellogoff':
             $obj = new \LOJA\API\UsuarioLogoff;
             $view = 'form-login-adm.php';
@@ -118,9 +126,11 @@
             \LOJA\includes\Seguranca::restritoAdm();
             $view = 'painel-adm.php';
         break;
+        
         case 'projeto':
             $view = 'projeto.php';
         break;
+
         case 'mapas':
             $view = 'lista-mapa.php';
         break;
@@ -138,6 +148,7 @@
         case 'carrinho':
             $view = 'carrinho.php';
         break;
+
         case 'home':
                 $obj = new \LOJA\API\CategoriaListar;
                 $lista = $obj->lista;
@@ -154,8 +165,8 @@
         break;
         
         default:
-                $obj = new \LOJA\API\ProdutoListarHome;
-                $lista2 = $obj->lista;
+            $obj = new \LOJA\API\ProdutoListarHome;
+            $lista2 = $obj->lista;
 
             $view = "home.php";
         break; 

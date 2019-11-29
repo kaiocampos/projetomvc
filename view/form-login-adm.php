@@ -14,7 +14,7 @@
         <!-- Form Name -->
       
         <legend class="d-flex justify-content-center ">  
-        <img src="<?php echo $url; ?>/img/doe-final.png" Class="w-75 d-flex justify-content-center ml-5" alt="">
+        <img src="<?php echo DIRIMG; ?>doe-final.png" Class="w-75 d-flex justify-content-center ml-5" alt="">
         </legend>
 
         <!-- Text input-->
