@@ -1,5 +1,5 @@
 <?php
-namespace LOJA\Model;        
+namespace LOJA\config;        
 
 /* caminho absoluto para a pasta do sistema */
 if ( !defined('ABSPATH') )
