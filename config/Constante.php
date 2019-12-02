@@ -8,7 +8,7 @@ if ( !defined('ABSPATH') )
 
 /* caminho no server para o sistema */
 if ( !defined('BASEURL') )
-    define('BASEURL', 'http://localhost/projetomvc2/');
+    define('BASEURL', 'http://localhost/projetomvc/');
 // print_r(BASEURL);
 
 #Diretórios Específicos

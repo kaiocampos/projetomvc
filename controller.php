@@ -1,6 +1,6 @@
 <?php     
     require "includes/autoload.php";
-    require "Model/Constante.php";
+    require "config/Constante.php";
     
     session_start();
 
